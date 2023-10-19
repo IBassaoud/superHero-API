@@ -1,0 +1,34 @@
+<div class="container">
+  <h2 class="text-center mb-4">Create Superhero</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="heroForm" class="custom-form">
+    <mat-form-field class="form-group" appearance="outline">
+      <mat-label for="name">Name</mat-label>
+      <input matInput type="text" id="name" formControlName="name" required>
+      <mat-error *ngIf="heroForm.get('name')?.invalid && (heroForm.get('name')?.dirty || heroForm.get('name')?.touched)">
+        Name is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-group" appearance="outline">
+      <mat-label for="firstName">First Name</mat-label>
+      <input matInput type="text" id="firstName" formControlName="firstName" required>
+      <mat-error *ngIf="heroForm.get('firstName')?.invalid && (heroForm.get('firstName')?.dirty || heroForm.get('firstName')?.touched)">
+        First Name is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-group" appearance="outline">
+      <mat-label for="lastName">Last Name</mat-label>
+      <input matInput type="text" id="lastName" formControlName="lastName" required>
+      <mat-error *ngIf="heroForm.get('lastName')?.invalid && (heroForm.get('lastName')?.dirty || heroForm.get('lastName')?.touched)">
+        Last Name is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-group" appearance="outline">
+      <mat-label for="place">Place</mat-label>
+      <input matInput type="text" id="place" formControlName="place" required>
+      <mat-error *ngIf="heroForm.get('place')?.invalid && (heroForm.get('place')?.dirty || heroForm.get('place')?.touched)">
+        Place is required.
+      </mat-error>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Create</button>
+  </form>
+</div>

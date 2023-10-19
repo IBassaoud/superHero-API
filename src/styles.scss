@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Update success snackbar styles */
+.success-snackbar {
+  background: #4caf50;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Update error snackbar styles */
+.error-snackbar {
+  background: #f44336;
+  color: #fff;
+  border-radius: 4px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
